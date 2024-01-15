@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <title>Binnenkort Beschikbaar - Puntje!</title>
+    <title>Puntje!</title>
     <style>
-        body { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            flex-direction: column; 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
+
         img.logo {
-            max-width: 200px; /* Adjust the size of the logo */
+            max-width: 200px;
+            /* Adjust the size of the logo */
             margin-bottom: 2rem;
         }
+
         .subscribe button {
             margin-top: 1rem;
         }
+
         footer {
             position: absolute;
             bottom: 1rem;
@@ -29,24 +34,28 @@
 </head>
 
 <!-- <iframe src="" width="640" height="586" frameborder="0" marginheight="0" marginwidth="0">Laden…</iframe> -->
+
 <body>
     <main class="container">
         <div class="grid">
             <section style="text-align: center;">
-                <img src="" alt="Puntje Logo" class="logo"/>
+                <img src="appicon-puntje.png" alt="Puntje" class="logo" />
                 <hgroup>
                     <h2>Welkom bij Puntje!</h2>
                     <h3>Je doet het weer.</h3>
                 </hgroup>
-                <p>Onze app is binnenkort beschikbaar. Blijf op de hoogte van de laatste updates en wees als eerste op de hoogte wanneer we live gaan.</p>
-                <form class="subscribe grid" action="https://docs.google.com/forms/d/e/1FAIpQLScNm3bXezDGT9aZRENGY6_gKfXCAoCCrRTWTZOJ26YAj_muGg/formResponse" method="POST" target="_blank">
-                    <!-- Replace 'entry.XXXXXXX' and 'entry.YYYYYYY' with the appropriate names from your Google Form fields -->
-                    <input type="text" name="entry.YI5jyb" placeholder="Uw naam" aria-label="Uw naam" required>
-                    <input type="email" name="entry.JGptt" placeholder="Uw e-mailadres" aria-label="Uw e-mailadres" required>
+                <p>Onze app is binnenkort beschikbaar. Blijf op de hoogte van de laatste updates en wees als eerste op
+                    de hoogte wanneer we live gaan.</p>
+                <form class="subscribe grid" action="https://formspree.io/f/xgegvzgw" method="POST">
+                    <input type="text" name="name" placeholder="Uw naam" aria-label="Uw naam" required>
+                    <input type="email" name="_replyto" placeholder="Uw e-mailadres" aria-label="Uw e-mailadres"
+                        required>
+                    <input type="hidden" name="_next" value="http://puntje.app/bedankt.html" />
                     <button type="submit">Abonneren</button>
+
                 </form>
-                
-                
+
+
             </section>
         </div>
     </main>
@@ -54,4 +63,5 @@
         <small>&copy; 2024 Puntje! - Alle rechten voorbehouden</small>
     </footer>
 </body>
+
 </html>
